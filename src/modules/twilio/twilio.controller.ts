@@ -16,7 +16,7 @@ export class TwilioController {
     }
   }
 
-  @Post('/verify-coide-sms')
+  @Post('/verify-code-sms')
   async verifyCodeSms(@Body() data: any) {
     try {
       await this.twilioService.verifyCodeSms(data);

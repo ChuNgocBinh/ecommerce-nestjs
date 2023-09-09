@@ -3,13 +3,13 @@ import { StatusResponse } from 'src/constants/constant';
 
 export class Response<D> {
   status: string;
-  code: number;
-  message: string;
+  statusCode: number;
+  error: string;
   data: D;
-  constructor(data: D, status?: string, code?: number, message?: string) {
+  constructor(data: D, status?: string, statusCode?: number, error?: string) {
     this.status = status || StatusResponse.Success;
-    this.code = code || HttpStatus.OK;
-    this.message = message;
+    this.statusCode = statusCode || HttpStatus.OK;
+    this.error = error;
     this.data = data;
   }
 }
