@@ -71,7 +71,7 @@ export class AuthController {
       return new Response({
         dataUser,
         token: access_token,
-        refresh_token,
+        refreshToken: refresh_token,
       });
     } catch (error) {
       throw new BadRequestException(error.message);
